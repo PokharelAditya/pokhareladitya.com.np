@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff3e0;
+    text-align: center;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header h1, header p {
+    color: #ff4081;
+}
+
+/* Fullscreen Image Styling */
+#image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.clickable-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.clickable-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Image Fade In/Out Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Balloon Styling */
+#balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    background: url('Images/balloon.png') no-repeat center/contain;
+    animation: floatUp 8s linear infinite;
+    opacity: 0;
+}
+
+/* Balloon floating animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150vh);
+        opacity: 0;
+    }
+}
+
+#birthdayMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #ff4081;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Balloon fade out animation */
+@keyframes fadeOutBalloons {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

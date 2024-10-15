@@ -73,7 +73,7 @@ header h1, header p {
     }
 }
 
-#birthdayMessage {
+header h1 {
     position: absolute;
     top: 50%;
     left: 50%;

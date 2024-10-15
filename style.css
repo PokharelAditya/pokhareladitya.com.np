@@ -87,6 +87,8 @@ font-style:italic;
 text-align:left;
     font-size: 1.2rem;
     color: #ff4081;
+margin-left:15px;
+margin-right:15px;
 }
 
 /* Balloon fade out animation */

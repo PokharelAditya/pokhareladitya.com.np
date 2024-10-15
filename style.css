@@ -83,8 +83,11 @@ header h1 {
 }
 
 header p {
+font-style:italic;
+font-family:cursive;
+text-align:left;
     font-size: 1.2rem;
-    color: #333;
+    color: #ff4081;
 }
 
 /* Balloon fade out animation */

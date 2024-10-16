@@ -1,5 +1,5 @@
 // Countdown Timer and Birthday Date
-const birthday = new Date("2024-10-17T00:00:00").getTime(); // Set her birthday date here
+const birthday = new Date("2024-10-16T00:00:00").getTime(); // Set her birthday date here
 const countdownElement = document.getElementById('countdown');
 const contentElement = document.getElementById('content');
 const initialHappyBirthday = document.getElementById('initial-happy-birthday');

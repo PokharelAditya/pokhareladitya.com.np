@@ -1,5 +1,5 @@
 // Countdown Timer and Birthday Date
-const birthday = new Date("2024-10-20T00:00:00").getTime(); // Set her birthday date here
+const birthday = new Date("2024-10-17T00:00:00").getTime(); // Set her birthday date here
 const countdownElement = document.getElementById('countdown');
 const contentElement = document.getElementById('content');
 const initialHappyBirthday = document.getElementById('initial-happy-birthday');
@@ -21,6 +21,7 @@ const interval = setInterval(() => {
     if (distance < 0) {
         clearInterval(interval);
         countdownElement.innerHTML = ""; // Hide the countdown timer
+        countdownElement.style.display = 'none';
         showInitialHappyBirthday();
     }
 }, 1000);
@@ -36,16 +37,23 @@ function showInitialHappyBirthday() {
         origin: { y: 0.6 }
     });
 
-    // After 3 seconds, hide the initial Happy Birthday message and start the image sequence
+    // After 3 seconds, hide the initial Happy Birthday message and wait for user interaction
     setTimeout(() => {
         initialHappyBirthday.style.display = 'none';
         showContent();
     }, 3000);
 }
 
-// Function to show content after the timer ends
+// Function to show content after the timer ends and user interaction
 function showContent() {
     contentElement.style.display = 'block'; // Show the birthday content
+
+    // Add a click event listener to start music and images on user interaction
+    document.body.addEventListener('click', startMusicAndImages, { once: true });
+}
+
+// Function to start the background music and display images one by one
+function startMusicAndImages() {
     backgroundMusic.play(); // Play background music
 
     // Display the images one by one, with fade animation
